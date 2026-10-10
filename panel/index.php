@@ -11,7 +11,8 @@ require_once __DIR__ . '/../data/datos_mockup.php';
 
     <!-- TARJETAS -->
     <div class="row g-4 mb-4">
-        <div class="col-md-4">
+        <!-- Productos -->
+        <div class="col-md-4 col-lg-4">
             <div class="card border-0 shadow-sm border-start border-success border-4 h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
@@ -26,7 +27,8 @@ require_once __DIR__ . '/../data/datos_mockup.php';
             </div>
         </div>
 
-        <div class="col-md-4">
+        <!-- Categorías -->
+        <div class="col-md-4 col-lg-4">
             <div class="card border-0 shadow-sm border-start border-primary border-4 h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
@@ -41,7 +43,8 @@ require_once __DIR__ . '/../data/datos_mockup.php';
             </div>
         </div>
 
-        <div class="col-md-4">
+        <!-- Marcas -->
+        <div class="col-md-4 col-lg-4">
             <div class="card border-0 shadow-sm border-start border-warning border-4 h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
@@ -52,6 +55,54 @@ require_once __DIR__ . '/../data/datos_mockup.php';
                         <i class="bi bi-award display-6 text-warning"></i>
                     </div>
                     <a href="marcas.php" class="btn btn-sm btn-outline-warning mt-3 w-100">Gestionar Marcas</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comentarios -->
+        <div class="col-md-4 col-lg-4">
+            <div class="card border-0 shadow-sm border-start border-info border-4 h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="text-uppercase text-muted fw-bold small">Comentarios</div>
+                            <div class="h3 mb-0 fw-bold">3</div>
+                        </div>
+                        <i class="bi bi-chat-left-text display-6 text-info"></i>
+                    </div>
+                    <a href="comentarios.php" class="btn btn-sm btn-outline-info mt-3 w-100">Moderar Comentarios</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usuarios -->
+        <div class="col-md-4 col-lg-4">
+            <div class="card border-0 shadow-sm border-start border-secondary border-4 h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="text-uppercase text-muted fw-bold small">Usuarios</div>
+                            <div class="h3 mb-0 fw-bold">3</div>
+                        </div>
+                        <i class="bi bi-people display-6 text-secondary"></i>
+                    </div>
+                    <a href="usuarios.php" class="btn btn-sm btn-outline-secondary mt-3 w-100">Gestionar Usuarios</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perfiles -->
+        <div class="col-md-4 col-lg-4">
+            <div class="card border-0 shadow-sm border-start border-dark border-4 h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="text-uppercase text-muted fw-bold small">Perfiles</div>
+                            <div class="h3 mb-0 fw-bold">3</div>
+                        </div>
+                        <i class="bi bi-shield-check display-6 text-dark"></i>
+                    </div>
+                    <a href="perfiles.php" class="btn btn-sm btn-outline-dark mt-3 w-100">Gestionar Perfiles</a>
                 </div>
             </div>
         </div>

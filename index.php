@@ -1,7 +1,4 @@
 <?php
-
-//Header
-
 require_once __DIR__ . '/includes/header_publico.php';
 
 require_once __DIR__ . '/data/datos_mockup.php';
@@ -35,8 +32,5 @@ require_once __DIR__ . '/data/datos_mockup.php';
 </div>
 
 <?php
-
-//Footer
-
 require_once __DIR__ . '/includes/footer_publico.php';
 ?>
