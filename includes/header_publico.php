@@ -32,14 +32,14 @@ require_once __DIR__ . '/../config/config.php';
                         <a class="nav-link" href="<?= BASE_URL ?>index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL ?>productos.php">Productos</a>
+                        <a class="nav-link" href="<?= BASE_URL ?>catalogo.php">Catalogo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= BASE_URL ?>contacto.php">Contáctenos</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="<?= BASE_URL ?>panel/login.php" class="btn btn-outline-light btn-sm">
+                    <a href="<?= BASE_URL ?>login.php" class="btn btn-outline-light btn-sm">
                         <i class="bi bi-person-fill me-1"></i> Acceso Admin
                     </a>
                 </div>

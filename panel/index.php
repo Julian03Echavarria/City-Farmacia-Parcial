@@ -47,7 +47,7 @@ require_once __DIR__ . '/../data/datos_mockup.php';
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <div class="text-uppercase text-muted fw-bold small">Marcas</div>
-                            <div class="h3 mb-0 fw-bold">3</div>
+                            <div class="h3 mb-0 fw-bold">4</div>
                         </div>
                         <i class="bi bi-award display-6 text-warning"></i>
                     </div>

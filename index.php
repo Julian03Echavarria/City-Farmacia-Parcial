@@ -12,7 +12,7 @@ require_once __DIR__ . '/data/datos_mockup.php';
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary text-center">
         <h1 class="display-5 fw-bold text-success">Bienvenidos a City Farmac</h1>
         <p class="lead my-3">Tu red de farmacias y perfumerías de confianza.</p>
-        <a href="productos.php" class="btn btn-success btn-lg">Ver Catálogo</a>
+        <a href="catalogo.php" class="btn btn-success btn-lg">Ver Catálogo</a>
     </div>
 
     <h2 class="mb-4 text-secondary border-bottom pb-2">Productos Destacados</h2>

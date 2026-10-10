@@ -51,7 +51,7 @@ $producto = $productos_destacados[0];
                         <a href="contacto.php" class="btn btn-success btn-lg px-4 me-md-2">
                             <i class="bi bi-chat-dots me-2"></i>Consultar por este producto
                         </a>
-                        <a href="productos.php" class="btn btn-outline-secondary btn-lg px-4">
+                        <a href="catalogo.php" class="btn btn-outline-secondary btn-lg px-4">
                             Volver al catálogo
                         </a>
                     </div>
