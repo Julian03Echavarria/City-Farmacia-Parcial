@@ -5,7 +5,7 @@ require_once __DIR__ . '/../data/datos_mockup.php';
 
 <div class="container-fluid p-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="h3 mb-0 text-gray-800"><i class="bi bi-speedometer2 me-2"></i>Panel de Control</h2>
+        <h2 class="h3 mb-0 text-gray-800"><i class="bi me-2"></i>Panel de Control</h2>
         <span class="badge bg-success fs-6">Bienvenido/a Admin</span>
     </div>
 
