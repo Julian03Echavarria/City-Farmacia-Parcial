@@ -105,12 +105,19 @@ $hay_productos = true;
                                     <h5 class="card-title my-2 fs-6"><?= htmlspecialchars($prod['nombre']) ?></h5>
                                     
                                     <!-- Ranking -->
-                                    <div class="mb-2 text-warning small">
-                                        <?php for ($i = 1; $i <= 5; $i++): ?>
-                                            <i class="bi bi-star<?= ($i <= $prod['ranking']) ? '-fill' : '' ?>"></i>
-                                        <?php endfor; ?>
-                                        <span class="text-muted ms-1">(<?= $prod['ranking'] ?>)</span>
-                                    </div>
+                                        <div class="text-warning mb-2 small">
+                                            <?php 
+                                            $puntaje_promedio = 5;
+                                            if (!empty($prod['comentarios'])) {
+                                                $suma = array_sum(array_column($prod['comentarios'], 'puntaje'));
+                                                $puntaje_promedio = round($suma / count($prod['comentarios']));
+                                            }
+                                            ?>
+                                            <?php for ($i = 1; $i <= 5; $i++): ?>
+                                                <i class="bi bi-star<?= ($i <= $puntaje_promedio) ? '-fill' : '' ?>"></i>
+                                            <?php endfor; ?>
+                                            <span class="text-muted ms-1">(<?= !empty($prod['comentarios']) ? count($prod['comentarios']) : 0 ?>)</span>
+                                        </div>
 
                                     <p class="card-text fw-bold fs-5 text-success mt-auto">$<?= number_format($prod['precio'], 2, ',', '.') ?></p>
                                     <a href="detalle.php?id=<?= $prod['id'] ?>" class="btn btn-outline-success btn-sm w-100">Ver Detalle</a>

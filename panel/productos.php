@@ -44,7 +44,7 @@ require_once __DIR__ . '/../data/datos_mockup.php';
                                     <span class="fw-semibold d-block"><?= htmlspecialchars($prod['nombre']) ?></span>
                                 </td>
                                 <td><span class="badge bg-light text-dark border"><?= htmlspecialchars($prod['marca']) ?></span></td>
-                                <td><small class="text-muted"><?= htmlspecialchars($prod['modelo']) ?></small></td>
+                                <td><small class="text-muted"><?= htmlspecialchars($prod['modelo'] ?? $prod['categoria'] ?? 'N/A') ?></small></td>
                                 <td class="fw-bold text-success">$<?= number_format($prod['precio'], 2, ',', '.') ?></td>
                                 <td class="text-end pe-3">
                                     <div class="btn-group btn-group-sm" role="group">

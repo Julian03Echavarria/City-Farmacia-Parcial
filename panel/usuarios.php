@@ -1,12 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/header_panel.php';
-
-// Mockup de usuarios
-$usuarios_admin = [
-    ['id' => 1, 'nombre' => 'Administrador General', 'email' => 'admin@cityfarmac.com', 'perfil' => 'Administrador', 'estado' => 'Activo'],
-    ['id' => 2, 'nombre' => 'Julián Editor', 'email' => 'julian@cityfarmac.com', 'perfil' => 'Editor', 'estado' => 'Activo'],
-    ['id' => 3, 'nombre' => 'María Cliente', 'email' => 'maria@correo.com', 'perfil' => 'Cliente', 'estado' => 'Inactivo'],
-];
+require_once __DIR__ .'/../data/datos_mockup.php';
 ?>
 
 <div class="container-fluid p-4">

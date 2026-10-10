@@ -1,12 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/header_panel.php';
-
-// Mockup de perfiles y permisos
-$perfiles_admin = [
-    ['id' => 1, 'nombre' => 'Administrador', 'permisos' => 'Acceso total a productos, categorías, marcas, comentarios, usuarios y perfiles.'],
-    ['id' => 2, 'nombre' => 'Editor', 'permisos' => 'Gestión de productos, categorías y moderación de comentarios.'],
-    ['id' => 3, 'nombre' => 'Cliente', 'permisos' => 'Acceso únicamente a la vista pública y perfil propio.'],
-];
+require_once __DIR__ .'/../data/datos_mockup.php';
 ?>
 
 <div class="container-fluid p-4">

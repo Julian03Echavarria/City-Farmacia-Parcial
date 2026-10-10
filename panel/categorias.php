@@ -1,13 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/header_panel.php';
-
-// Mockup de categorías para la tabla
-$categorias = [
-    ['id' => 1, 'nombre' => 'Cuidado Personal', 'descripcion' => 'Productos para higiene y cuidado diario.', 'productos_count' => 12],
-    ['id' => 2, 'nombre' => 'Dermocosmética', 'descripcion' => 'Tratamientos faciales, protectores y cremas.', 'productos_count' => 8],
-    ['id' => 3, 'nombre' => 'Farmacia y Medicamentos', 'descripcion' => 'Venta libre y artículos de botiquín.', 'productos_count' => 15],
-    ['id' => 4, 'nombre' => 'Bebés y Maternidad', 'descripcion' => 'Pañales, accesorios y fórmulas.', 'productos_count' => 5],
-];
+require_once __DIR__ . '/../data/datos_mockup.php';
 ?>
 
 <div class="container-fluid p-4">

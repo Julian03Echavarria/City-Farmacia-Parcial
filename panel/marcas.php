@@ -1,13 +1,7 @@
 <?php
 require_once __DIR__ . '/../includes/header_panel.php';
+require_once __DIR__ . '/../data/datos_mockup.php';
 
-// Mockup de marcas para la tabla
-$marcas = [
-    ['id' => 1, 'nombre' => 'Dermaglós', 'origen' => 'Argentina', 'productos_count' => 6],
-    ['id' => 2, 'nombre' => 'La Roche-Posay', 'origen' => 'Francia', 'productos_count' => 4],
-    ['id' => 3, 'nombre' => "L'Oréal Paris", 'origen' => 'Francia', 'productos_count' => 5],
-    ['id' => 4, 'nombre' => 'Nivea', 'origen' => 'Alemania', 'productos_count' => 7],
-];
 ?>
 
 <div class="container-fluid p-4">

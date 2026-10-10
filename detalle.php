@@ -2,7 +2,19 @@
 require_once __DIR__ . '/includes/header_publico.php';
 require_once __DIR__ . '/data/datos_mockup.php';
 
-$producto = $productos_destacados[0]; 
+$id_producto = isset($_GET['id']) ? (int)$_GET['id'] : 1;
+
+$producto = null;
+foreach ($productos_destacados as $prod) {
+    if ($prod['id'] === $id_producto) {
+        $producto = $prod;
+        break;
+    }
+}
+
+if (!$producto) {
+    $producto = $productos_destacados[0];
+}
 ?>
 
 <div class="container my-5">
@@ -29,12 +41,19 @@ $producto = $productos_destacados[0];
                     <h2 class="fw-bold mb-2"><?= htmlspecialchars($producto['nombre']) ?></h2>
                     
                     <!-- Calificación -->
-                    <div class="mb-3 text-warning">
-                        <?php for ($i = 1; $i <= 5; $i++): ?>
-                            <i class="bi bi-star<?= ($i <= $producto['ranking']) ? '-fill' : '' ?> fs-5"></i>
-                        <?php endfor; ?>
-                        <span class="text-muted ms-2">(<?= $producto['ranking'] ?> de 5 estrellas)</span>
-                    </div>
+                <div class="mb-3 text-warning">
+                  <?php 
+                 $puntaje_promedio = 5;
+                 if (!empty($producto['comentarios'])) {
+                     $suma = array_sum(array_column($producto['comentarios'], 'puntaje'));
+                     $puntaje_promedio = round($suma / count($producto['comentarios']));
+                 }
+                 ?>
+                 <?php for ($i = 1; $i <= 5; $i++): ?>
+                     <i class="bi bi-star<?= ($i <= $puntaje_promedio) ? '-fill' : '' ?> fs-5"></i>
+                    <?php endfor; ?>
+                 <span class="text-muted ms-2 fs-6">(de 5 estrellas)</span>
+                </div>
 
                     <h3 class="text-success fw-bold display-6 mb-3">$<?= number_format($producto['precio'], 2, ',', '.') ?></h3>
                     
@@ -62,26 +81,34 @@ $producto = $productos_destacados[0];
 
     <div class="row">
         <!-- Lista de Comentarios -->
-        <div class="col-lg-7 mb-4">
-            <h4 class="fw-bold mb-4"><i class="bi bi-chat-left-text me-2"></i>Opiniones de clientes</h4>
+            <div class="col-lg-7 mb-4">
+                <h4 class="fw-bold mb-4"><i class="bi bi-chat-left-text me-2"></i>Opiniones de clientes</h4>
 
-            <?php foreach ($producto['comentarios'] as $comentario): ?>
-                <div class="card mb-3 shadow-sm border-0 bg-light">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h6 class="fw-bold mb-0"><?= htmlspecialchars($comentario['usuario']) ?></h6>
-                            <small class="text-muted"><?= $comentario['fecha'] ?></small>
-                        </div>
-                        <div class="text-warning mb-2 small">
-                            <?php for ($i = 1; $i <= 5; $i++): ?>
-                                <i class="bi bi-star<?= ($i <= $comentario['puntaje']) ? '-fill' : '' ?>"></i>
-                            <?php endfor; ?>
-                        </div>
-                        <p class="card-text text-secondary mb-0"><?= htmlspecialchars($comentario['mensaje']) ?></p>
+                <?php if (!empty($producto['comentarios'])): ?>
+                    <div class="d-flex flex-column gap-3">
+                        <?php foreach ($producto['comentarios'] as $comentario): ?>
+                            <div class="card shadow-sm border-0 bg-light">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="fw-bold mb-0"><?= htmlspecialchars($comentario['usuario']) ?></h6>
+                                        <small class="text-muted"><?= htmlspecialchars($comentario['fecha'] ?? 'Reciente') ?></small>
+                                    </div>
+                                    <div class="text-warning mb-2 small">
+                                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                                            <i class="bi bi-star<?= ($i <= $comentario['puntaje']) ? '-fill' : '' ?>"></i>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <p class="card-text text-secondary mb-0"><?= htmlspecialchars($comentario['mensaje']) ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
+                <?php else: ?>
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <i class="bi bi-info-circle me-2"></i>Aún no hay comentarios para este producto. ¡Sé el primero en opinar!
+                    </div>
+                <?php endif; ?>
+            </div>
 
         <!-- Formulario -->
         <div class="col-lg-5">

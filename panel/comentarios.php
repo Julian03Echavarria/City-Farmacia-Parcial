@@ -1,12 +1,6 @@
 <?php
 require_once __DIR__ . '/../includes/header_panel.php';
-
-// Mockup de comentarios para moderación
-$comentarios_admin = [
-    ['id' => 1, 'producto' => 'Crema Hidratante Facial', 'usuario' => 'María Gómez', 'puntaje' => 5, 'mensaje' => 'Excelente producto, mi piel se nota mucho más hidratada.', 'estado' => 'Aprobado', 'fecha' => '2026-10-05'],
-    ['id' => 2, 'producto' => 'Protector Solar SPF 50', 'usuario' => 'Carlos Pérez', 'puntaje' => 4, 'mensaje' => 'Muy bueno, no deja la piel grasa aunque es un poco espeso.', 'estado' => 'Pendiente', 'fecha' => '2026-10-06'],
-    ['id' => 3, 'producto' => 'Shampoo Fortalecedor', 'usuario' => 'Lucía Fernández', 'puntaje' => 1, 'mensaje' => 'No me sirvió para nada, me dejó el pelo reseco.', 'estado' => 'Rechazado', 'fecha' => '2026-10-04'],
-];
+require_once __DIR__ .'/../data/datos_mockup.php';
 ?>
 
 <div class="container-fluid p-4">
