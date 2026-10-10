@@ -18,7 +18,7 @@ require_once __DIR__ . '/data/datos_mockup.php';
         <?php foreach ($productos_destacados as $prod): ?>
             <div class="col">
                 <div class="card h-100 shadow-sm">
-                    <img src="<?= $prod['imagen'] ?>" class="card-img-top" alt="<?= htmlspecialchars($prod['nombre']) ?>">
+                    <img src="assets/img/<?= $prod['imagen'] ?>" class="card-img-top" alt="<?= htmlspecialchars($prod['nombre']) ?>">
                     <div class="card-body d-flex flex-column">
                         <small class="text-muted text-uppercase fw-bold"><?= htmlspecialchars($prod['marca']) ?></small>
                         <h5 class="card-title my-2"><?= htmlspecialchars($prod['nombre']) ?></h5>

@@ -38,7 +38,7 @@ require_once __DIR__ . '/../data/datos_mockup.php';
                             <tr>
                                 <td class="ps-3 fw-bold">#<?= $prod['id'] ?></td>
                                 <td>
-                                    <img src="<?= $prod['imagen'] ?>" alt="<?= htmlspecialchars($prod['nombre']) ?>" class="rounded" style="width: 48px; height: 48px; object-fit: contain;">
+                                    <img src="../assets/img/<?= $prod['imagen'] ?>" alt="<?= htmlspecialchars($prod['nombre']) ?>" class="rounded" style="width: 48px; height: 48px; object-fit: contain;">
                                 </td>
                                 <td>
                                     <span class="fw-semibold d-block"><?= htmlspecialchars($prod['nombre']) ?></span>

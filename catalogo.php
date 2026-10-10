@@ -99,7 +99,7 @@ $hay_productos = true;
                     <?php foreach ($productos_destacados as $prod): ?>
                         <div class="col">
                             <div class="card h-100 shadow-sm border-0">
-                                <img src="<?= $prod['imagen'] ?>" class="card-img-top" alt="<?= htmlspecialchars($prod['nombre']) ?>">
+                                <img src="assets/img/<?= $prod['imagen'] ?>" class="card-img-top" alt="<?= htmlspecialchars($prod['nombre']) ?>">
                                 <div class="card-body d-flex flex-column">
                                     <small class="text-muted text-uppercase fw-bold"><?= htmlspecialchars($prod['marca']) ?></small>
                                     <h5 class="card-title my-2 fs-6"><?= htmlspecialchars($prod['nombre']) ?></h5>

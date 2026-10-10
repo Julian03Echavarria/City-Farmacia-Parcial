@@ -32,7 +32,7 @@ if (!$producto) {
             <div class="row align-items-center">
                 <!-- Imagen -->
                 <div class="col-md-5 text-center mb-4 mb-md-0">
-                    <img src="<?= $producto['imagen'] ?>" class="img-fluid rounded shadow-sm" alt="<?= htmlspecialchars($producto['nombre']) ?>" style="max-height: 350px; object-fit: contain;">
+                    <img src="assets/img/<?= $prod['imagen'] ?>" class="img-fluid rounded shadow-sm" alt="<?= htmlspecialchars($producto['nombre']) ?>" style="max-height: 350px; object-fit: contain;">
                 </div>
 
                 <!-- Información -->

@@ -18,7 +18,7 @@ require_once __DIR__ . '/../config/config.php';
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container-fluid px-4">
             <a class="navbar-brand fw-bold text-success" href="<?= BASE_URL ?>panel/index.php">
-                <i class="bi bi-speedometer2 me-2"></i>City Farmacia - Admin
+                <i class="bi me-2"></i>City Farmacia - Admin
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPanel">
                 <span class="navbar-toggler-icon"></span>
